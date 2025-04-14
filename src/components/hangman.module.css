@@ -1,0 +1,350 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+
+  .startGroup {
+    display: flex;
+    gap: 10px;
+
+  }
+
+  .startButton,
+  .startButtonKid,
+  .startButtonAdult {
+    width: 100%;
+    padding: 14px;
+
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+  }
+
+  .startButton {
+    background-color: #4CAF50;
+  }
+
+  .startButtonAdult {
+    background-color: #4caf95;
+  }
+
+  .startButtonKid {
+    background-color: #3f5bf8;
+  }
+
+  .startButton:hover {
+    background-color: #367C39;
+  }
+
+
+}
+
+
+.alertDestructive {
+  color: red;
+  background-color: #f8d7da;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+.alert {
+  color: green;
+  background-color: #d4edda;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.incorrectLetters {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.wordDisplay {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+  animation: reveal 0.8s forwards;
+  opacity: 0;
+}
+
+
+.checkButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.checkButton:hover {
+  background-color: #0056b3;
+}
+
+.incorrectAttempts {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+}
+
+.newGameButton {
+  padding: 12px 24px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.newGameButton:hover {
+  background-color: #333;
+}
+
+.hangmanContainer {
+  width: 200px;
+  height: 220px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.hangmanBase {
+  position: absolute;
+  width: 120px;
+  height: 6px;
+  background-color: #333;
+  /* Darker base */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hangmanPole {
+  position: absolute;
+  width: 6px;
+  height: 180px;
+  background-color: #333;
+  /* Darker pole */
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+}
+
+.hangmanTop {
+  position: absolute;
+  width: 80px;
+  height: 6px;
+  background-color: #333;
+  /* Darker top */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hangmanRope {
+  position: absolute;
+  width: 6px;
+  height: 30px;
+  background-color: #666;
+  /* Lighter rope */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateX(34px);
+}
+
+.hangmanHead {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid #333;
+  /* Darker head border */
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateX(30px);
+}
+
+.hangmanBody {
+  width: 6px;
+  height: 70px;
+  background-color: #333;
+  /* Darker body */
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%) translateX(34px);
+}
+
+.hangmanArm1 {
+  width: 40px;
+  height: 6px;
+  background-color: #333;
+  /* Darker arm */
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateX(4px) rotate(30deg);
+}
+
+.hangmanArm2 {
+  width: 40px;
+  height: 6px;
+  background-color: #333;
+  /* Darker arm */
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateX(64px) rotate(-30deg);
+}
+
+.hangmanLeg1 {
+  width: 40px;
+  height: 6px;
+  background-color: #333;
+  /* Darker leg */
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%) translateX(4px) rotate(-30deg);
+}
+
+.hangmanLeg2 {
+  width: 40px;
+  height: 6px;
+  background-color: #333;
+  /* Darker leg */
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%) translateX(64px) rotate(30deg);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply fade-in animation to hangman parts */
+.fade {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.5em;
+  }
+
+  100% {
+    opacity: 1;
+    letter-spacing: 0.1em;
+  }
+}

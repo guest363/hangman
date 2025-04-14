@@ -1,0 +1,10 @@
+---
+import Main from "@layouts/main.astro";
+import { Hangman } from "../components/hangman";
+---
+
+<Main>
+  <div class="main-content">
+    <Hangman client:load />
+  </div>
+</Main>
