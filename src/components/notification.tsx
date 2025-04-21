@@ -1,17 +1,16 @@
-
-import styles from './notification.module.css';
+import styles from "./notification.module.css";
 
 export const Notification = ({ message, type }) => {
   let notificationStyle = styles.notification;
 
   switch (type) {
-    case 'success':
+    case "success":
       notificationStyle = `${styles.notification} ${styles.success}`;
       break;
-    case 'error':
+    case "error":
       notificationStyle = `${styles.notification} ${styles.error}`;
       break;
-    case 'warning':
+    case "warning":
       notificationStyle = `${styles.notification} ${styles.warning}`;
       break;
     default:
@@ -19,9 +18,5 @@ export const Notification = ({ message, type }) => {
       break;
   }
 
-  return (
-    <div className={notificationStyle}>
-      {message}
-    </div>
-  );
+  return <div className={notificationStyle}>{message}</div>;
 };

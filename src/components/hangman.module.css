@@ -48,10 +48,9 @@
 }
 
 .input:focus {
-  border-color: #4CAF50;
+  border-color: #4caf50;
   outline: none;
 }
-
 
 .inputContainer {
   display: flex;
@@ -60,7 +59,6 @@
   .startGroup {
     display: flex;
     gap: 10px;
-
   }
 
   .startButton,
@@ -75,11 +73,12 @@
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    margin-top: 30px;
+
   }
 
   .startButton {
-    background-color: #4CAF50;
+    background-color: #4caf50;
+    margin-top: 30px;
   }
 
   .startButtonAdult {
@@ -91,12 +90,9 @@
   }
 
   .startButton:hover {
-    background-color: #367C39;
+    background-color: #367c39;
   }
-
-
 }
-
 
 .alertDestructive {
   color: red;
@@ -143,7 +139,6 @@
   animation: reveal 0.8s forwards;
   opacity: 0;
 }
-
 
 .checkButton {
   padding: 10px 20px;

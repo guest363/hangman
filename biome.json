@@ -1,0 +1,73 @@
+{
+  "$schema": "../../node_modules/@biomejs/biome/configuration_schema.json",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "ignore": [
+      "**/dist/**/*",
+      "**/public/**/*",
+      "**/build/**/*",
+      ".turbo/**/*",
+      ".yarn/**/*",
+      "node_modules/**/*"
+    ]
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noNamespace": "error"
+      }
+    },
+    "ignore": [
+      "**/dist/**/*",
+      "**/public/**/*",
+      "**/build/**/*",
+      ".turbo/**/*",
+      ".yarn/**/*",
+      "node_modules/**/*"
+    ]
+  },
+  "json": {
+    "linter": {
+      "enabled": true
+    }
+  },
+  "overrides": [
+    {
+      "include": [
+        "*.config.js",
+        "*.config.cjs",
+        "*.config.mjs",
+        "*.config.ts",
+        "*.d.ts"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ],
+  "css": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    },
+    "parser": {
+      "cssModules": true
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git"
+  }
+}
