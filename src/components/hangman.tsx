@@ -59,7 +59,6 @@ export const Hangman = () => {
 
           <div className={styles.flex}>
             {gameState !== "setup" && incorrectGuesses ? <div className={styles.hangmanContainer}> <img
-
               src={`assets/${incorrectGuesses}.jpg`}
               alt={'hangman'}
               className={cn(styles.fade, styles.image)}
