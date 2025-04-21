@@ -75,7 +75,7 @@ export const useHangman = () => {
   };
 
   useEffect(() => {
-    if (incorrectGuesses >= 10) {
+    if (incorrectGuesses >= 11) {
       setGameState("lost");
     }
 

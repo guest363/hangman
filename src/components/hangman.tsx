@@ -1,8 +1,8 @@
+import cn from "clsx";
+import { useHangman } from "../hooks/use-hangman";
 import styles from "./hangman.module.css";
 import { Notification } from "./notification";
 import { SetUp } from "./set-up";
-import { useHangman } from "../hooks/use-hangman";
-
 export const Hangman = () => {
   const {
     word,
@@ -29,31 +29,6 @@ export const Hangman = () => {
       .join(" ");
   };
 
-  const renderHangman = () => {
-    const hangmanParts = Array.from({ length: 11 }, (_, i) => {
-      const partKey = [
-        "",
-        "base",
-        "pole",
-        "top",
-        "rope",
-        "head",
-        "body",
-        "arm1",
-        "arm2",
-        "leg1",
-        "leg2",
-      ][i];
-      return i <= incorrectGuesses ? (
-        <div
-          key={partKey}
-          className={`${styles[`hangman${partKey.charAt(0).toUpperCase() + partKey.slice(1)}`]} ${styles.fade}`}
-        ></div>
-      ) : null;
-    }).filter(Boolean);
-
-    return <div className={styles.hangmanContainer}>{hangmanParts}</div>;
-  };
 
   return (
     <div className={styles.container}>
@@ -83,7 +58,12 @@ export const Hangman = () => {
           )}
 
           <div className={styles.flex}>
-            {gameState !== "setup" && renderHangman()}
+            {gameState !== "setup" && incorrectGuesses ? <div className={styles.hangmanContainer}> <img
+
+              src={`/assets/${incorrectGuesses}.jpg`}
+              alt={'hangman'}
+              className={cn(styles.fade, styles.image)}
+            /></div> : null}
             <div className={styles.flexCol}>
               {gameState !== "setup" && (
                 <div className={styles.incorrectLetters}>
@@ -124,7 +104,7 @@ export const Hangman = () => {
           )}
           {gameState !== "setup" && (
             <div className={styles.incorrectAttempts}>
-              Неверные попытки: {incorrectGuesses} / 10
+              Неверные попытки: {incorrectGuesses} / 11
             </div>
           )}
           {gameState !== "setup" && (

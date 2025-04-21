@@ -177,8 +177,8 @@
 }
 
 .hangmanContainer {
-  width: 200px;
-  height: 220px;
+  width: 250px;
+  height: 250px;
   position: relative;
   margin-bottom: 20px;
 }
@@ -194,104 +194,11 @@
   transform: translateX(-50%);
 }
 
-.hangmanPole {
-  position: absolute;
-  width: 6px;
-  height: 180px;
-  background-color: #333;
-  /* Darker pole */
-  left: 50%;
-  bottom: 6px;
-  transform: translateX(-50%);
-}
 
-.hangmanTop {
-  position: absolute;
-  width: 80px;
-  height: 6px;
-  background-color: #333;
-  /* Darker top */
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hangmanRope {
-  position: absolute;
-  width: 6px;
-  height: 30px;
-  background-color: #666;
-  /* Lighter rope */
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%) translateX(34px);
-}
-
-.hangmanHead {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 4px solid #333;
-  /* Darker head border */
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%) translateX(30px);
-}
-
-.hangmanBody {
-  width: 6px;
-  height: 70px;
-  background-color: #333;
-  /* Darker body */
-  position: absolute;
-  top: 64px;
-  left: 50%;
-  transform: translateX(-50%) translateX(34px);
-}
-
-.hangmanArm1 {
-  width: 40px;
-  height: 6px;
-  background-color: #333;
-  /* Darker arm */
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%) translateX(4px) rotate(30deg);
-}
-
-.hangmanArm2 {
-  width: 40px;
-  height: 6px;
-  background-color: #333;
-  /* Darker arm */
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%) translateX(64px) rotate(-30deg);
-}
-
-.hangmanLeg1 {
-  width: 40px;
-  height: 6px;
-  background-color: #333;
-  /* Darker leg */
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  transform: translateX(-50%) translateX(4px) rotate(-30deg);
-}
-
-.hangmanLeg2 {
-  width: 40px;
-  height: 6px;
-  background-color: #333;
-  /* Darker leg */
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  transform: translateX(-50%) translateX(64px) rotate(30deg);
+.image {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
 }
 
 /* Animation for fade-in effect */
